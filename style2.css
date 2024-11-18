@@ -1,0 +1,291 @@
+/* shared content*/
+body {
+  font-family: Arial, sans-serif;
+  height: 90vh;
+  background-color: #fff;
+  background-image: url("Home2.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-around;
+  background-color: #333;
+  padding: 15px;
+  margin-bottom: 20px; /* Space below navbar */
+}
+
+.navbar p {
+  color: white;
+  font-size: large;
+  font-size: larger;
+}
+
+.navbar a {
+  color: white;
+  text-decoration: none;
+  padding: 8px;
+  margin-top: 15px;
+}
+
+.navbar a:hover {
+  background-color: #575757;
+}
+
+.Welcome {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: xx-large;
+  margin-bottom: 10px;
+}
+
+/* Content */
+.content {
+  padding: 20px;
+  margin: 0 20px;
+  text-align: center;
+  display: none; /* All content hidden by default */
+  justify-content: center;
+}
+
+/* Modal */
+.modal {
+  display: none;
+  position:relative;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+  background-color: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  width: 400px; /* Fixed reasonable width */
+  margin: auto; /* Center modal content */
+}
+/* Dashboard Content */
+#dashboardContent {
+  padding: 20px;
+  text-align: center;
+}
+
+#dashboardContent h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+#dashboardContent .DC {
+  font-size: 18px;
+  margin: 10px 0;
+  display: flex;            /* Use flexbox to control alignment */
+  flex-direction: column;   /* Stack items vertically */
+  align-items: center;      /* Center the items horizontally */
+}
+
+#dashboardContent .circle {
+  display: block;            /* Block-level element to make them stack */
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+  text-align: center;
+  border-radius: 50%;
+  background-color: #4CAF50;
+  color: white;
+  font-weight: bold;
+  margin-bottom: 10px;       /* Space between circles */
+}
+
+
+/* Employee List */
+#employeeListContent {
+  padding: 20px;
+  text-align: center;
+}
+
+#employeeListContent h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Table Styles */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 20px;
+}
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ccc;
+  text-align: left;
+}
+
+th {
+  background-color: #f2f2f2;
+}
+#employeeListContent table td button {
+  background-color: #e93746; /* Green background */
+  color: white;              /* White text */
+  font-weight: bold;
+  font-size: 14px;
+  padding: 8px 16px;         /* Add padding for size */
+  border: none;              /* Remove default border */
+  border-radius: 5px;        /* Rounded corners */
+  cursor: pointer;          /* Pointer cursor on hover */
+  transition: all 0.3s ease; /* Smooth transition for hover effects */
+  text-align: center;
+}
+#employeeListContent table td button:hover {
+  background-color: #45a049; /* Darker green on hover */
+  transform: translateY(-2px); /* Slight upward movement on hover */
+}
+
+#employeeListContent table td button:focus {
+  outline: none;             /* Remove focus outline */
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2); /* Subtle shadow on focus */
+}
+
+/* Add Employee Form */
+#addEmployeeContent {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  height: 100vh;          /* Full screen height */
+  margin-top: 5px;
+}
+
+#newEmployeeForm {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  width: 400px; /* Fixed reasonable width */
+  margin-left: 400px;
+}
+
+#newEmployeeForm .form-group {
+  display: flex;
+  flex-direction:column ; /* Stack labels and inputs vertically */
+  margin-bottom: 7px;    /* Spacing between fields */
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#newEmployeeForm label {
+  font-weight: bold;
+  margin-bottom: 5px; /* Space between label and input */
+  font-size: 14px;
+  color: #333;
+  
+}
+
+#newEmployeeForm input{
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Rounded corners */
+  width: 80%; /* Full width of container */
+  box-sizing: border-box; /* Prevent overflow */
+  margin-left: 40px;
+}
+
+#newEmployeeForm button {
+  background-color: #007BFF; /* Blue button */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px; /* Rounded corners */
+  width: 80%; /* Full width of container */
+  box-sizing: border-box; /* Prevent overflow */
+}
+
+
+#newEmployeeForm button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+
+/* Edit Employee Modal */
+#editEmployeeModal {
+  display: flex;
+  justify-content: center; /* Center horizontally */
+  align-items: center;    /* Center vertically */
+  position: fixed;        /* Ensure it stays in place */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Background overlay */
+  z-index: 9999; /* Ensure it stays on top */
+}
+
+#editEmployeeForm {
+  background-color: #f9f9f9; /* Light background for contrast */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Subtle shadow for depth */
+  width: 90%;
+  max-width: 400px; /* Maximum width for larger screens */
+  height: auto;
+  max-height: 80vh; /* Max height to fit screen */
+  overflow-y: auto; /* Enable vertical scroll if content overflows */
+}
+
+#editEmployeeForm .form-group {
+  display: flex;
+  flex-direction: column; /* Stack labels and inputs vertically */
+  margin-bottom: 7px;
+}
+
+#editEmployeeForm label {
+  font-weight: bold;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #333;
+}
+
+#editEmployeeForm input,
+#editEmployeeForm button {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  width: 100%; /* Full width of container */
+  box-sizing: border-box;
+}
+
+#editEmployeeForm button {
+  background-color: #007BFF; /* Blue button */
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#editEmployeeForm button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Prevent Scrollbars on Modal Content */
+#editEmployeeModal {
+  overflow: hidden; /* Ensure no scrolling on the modal overlay */
+}
+
+#editEmployeeForm {
+  overflow-y: auto; /* Allow scrolling only within the form if needed */
+}
+
+

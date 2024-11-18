@@ -1,0 +1,248 @@
+* {
+    margin: 0;
+    padding: 0;
+    
+  }
+  
+  body {
+    font-family: Arial, sans-serif;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    height: 100vh;
+    background-color: #fff;
+    background-image: url("Home2.jpg");
+    background-repeat: no-repeat;
+    background-size:cover;
+  }
+ 
+  .container {
+    text-align: center;
+   
+  }
+  
+  h1 {
+    margin-bottom: 20px;
+  }
+  .para{
+    font-size: large;
+  }
+  .para2{
+    margin-top: 5px;
+  }
+  #empName, #empID, #empPassword {
+  width: 95%;
+  background-color: gainsboro;
+    
+  }
+  #signupName, #signupID, #signupFatherName, #signupPassword{
+    width: 95%;
+    background-color: gainsboro;
+  }
+  #adminEmail, #adminPassword{
+    width: 95%;
+    background-color:gainsboro ;
+  }
+  #adminName, #adminDesignation, #adminSignupEmail, #adminSignupPassword{
+    width: 95%;
+    background-color:gainsboro ;
+  }
+  .employeeTask{
+    display:flexbox;
+    flex-direction: column;
+    gap: 10px;
+  }
+  #taskList{
+    font-size: large;
+  }
+
+  .logout-container {
+    margin-top: 20px;
+    text-align: center; /* Center-aligns the logout button */
+  }
+  
+  .logoutBtn {
+    padding: 10px 20px;
+    font-size: 16px;
+    background-color:rgba(63, 58, 58, 0.925);/* Color can be customized */
+    color:white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  .logout-container button:hover {
+    background-color: #d32f2f; /* Darker shade for hover */
+  }
+  
+  .content{
+    display: inline;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .button-container button {
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 18px;
+    cursor: pointer;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+  }
+  
+  .button-container button:hover {
+    background-color: #0056b3;
+  }
+  
+  .modal {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .modal-content {
+    background-color: #fff;
+    padding: 20px;
+    width: 90%;
+    max-width: 400px;
+    border-radius: 10px;
+    text-align: left;
+  }
+  
+  .close {
+    float: right;
+    font-size: 24px;
+    cursor: pointer;
+  }
+  
+  form label {
+    display: block;
+    margin-top: 10px;
+  }
+  
+  form input {
+    width: 100%;
+    padding: 8px;
+    margin-top: 5px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+  }
+  
+  form button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+  form button:hover {
+    background-color: #0056b3;
+  }
+/* Task Page Styles */
+/* Global Styles */
+body {
+  font-family: Arial, sans-serif;
+  background-color: #f4f4f4;
+  margin: 0;
+  padding: 0;
+}
+
+/* Task Container */
+.task-container {
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  max-width: 600px;
+  margin: 50px auto;
+  text-align: center;
+}
+
+/* Task List */
+#taskList {
+  margin-top: 20px;
+}
+
+.task-item {
+  background-color: #f9f9f9;
+  padding: 10px;
+  margin: 10px 0;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.task-item p {
+  margin: 0;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+/* Task Completion Button */
+button {
+  background-color: #007BFF; /* Blue by default */
+  color: white;
+  padding: 10px 20px;
+  font-size: 14px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  margin-top: 10px;
+}
+
+button:hover {
+  background-color: #0056b3; /* Darker blue on hover */
+}
+
+/* Logout Button Styling */
+button.logout {
+  background-color: #ff4d4d; /* Red for logout */
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%); /* Center button horizontally */
+  padding: 12px 25px;
+  font-size: 16px;
+  font-weight: bold;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  width: auto;
+}
+
+button.logout:hover {
+  background-color: #e63946; /* Darker red on hover */
+}
+
+/* Task Completion Button (Center the Task Completion Button) */
+.task-item button {
+  margin: 10px auto;
+  display: block;
+  width: 150px;
+}
+
+h2 {
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+}
+h3{
+  font-size: 24px;
+  color: #333;
+  font-weight: bold;
+  display: flex; 
+}
+
+  

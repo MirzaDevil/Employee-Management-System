@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Employee Management App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="BackGround">
+  <div class="container">
+    <h1>Employee Management System</h1>
+    <p class="para">Welcome to our Employee Management System! </p>
+    <div class="button-container">
+      <button onclick="openEmployeeLogin()">Employee</button>
+      <button onclick="openAdminLogin()">Admin</button>
+    </div>
+  </div>
+</div>
+
+  <!-- Employee Login Modal -->
+  <div id="employeeLoginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeEmployeeLogin()">&times;</span>
+      <h2>Employee Login</h2>
+      <form id="employeeLoginForm" onsubmit="validateEmployeeLogin(event)">
+        <label for="empName">Name:</label>
+        <input type="text" id="empName" name="empName" required>
+        <label for="empID">Employee ID:</label>
+        <input type="text" id="empID" name="empID" required>
+        <label for="empPassword">Password:</label>
+        <input type="password" id="empPassword" name="empPassword" required>
+        <button type="submit">Login</button>
+      </form>
+      <p class="para2">If not registered, please <a href="#" onclick="openEmployeeSignup()">sign up</a>.</p>
+    </div>
+  </div>
+
+  <!-- Employee Signup Modal -->
+  <div id="employeeSignupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeEmployeeSignup()">&times;</span>
+      <h2>Employee Signup</h2>
+      <form id="employeeSignupForm" onsubmit="saveEmployeeSignup(event)">
+        <label for="signupName">Name:</label>
+        <input type="text" id="signupName" name="signupName" required>
+        <label for="signupFatherName">Father's Name:</label>
+        <input type="text" id="signupFatherName" name="signupFatherName" required>
+        <label for="signupID">Employee ID:</label>
+        <input type="text" id="signupID" name="signupID" required>
+        <label for="signupPassword">Password:</label>
+        <input type="password" id="signupPassword" name="signupPassword" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Admin Login Modal -->
+  <div id="adminLoginModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAdminLogin()">&times;</span>
+      <h2>Admin Login</h2>
+      <form id="adminLoginForm" onsubmit="validateAdminLogin(event)">
+        <label for="adminEmail">Email:</label>
+        <input type="email" id="adminEmail" name="adminEmail" required>
+        <label for="adminPassword">Password:</label>
+        <input type="password" id="adminPassword" name="adminPassword" required>
+        <button type="submit">Login</button>
+      </form>
+      <p class="para2">If not registered, please <a href="#" onclick="openAdminSignup()">sign up</a>.</p>
+    </div>
+  </div>
+
+  <!-- Admin Signup Modal -->
+  <div id="adminSignupModal" class="modal">
+    <div class="modal-content">
+      <span class="close" onclick="closeAdminSignup()">&times;</span>
+      <h2>Admin Signup</h2>
+      <form id="adminSignupForm" onsubmit="saveAdminSignup(event)">
+        <label for="adminName">Name:</label>
+        <input type="text" id="adminName" name="adminName" required>
+        <label for="adminDesignation">Designation:</label>
+        <input type="text" id="adminDesignation" name="adminDesignation" required>
+        <label for="adminSignupEmail">Email:</label>
+        <input type="email" id="adminSignupEmail" name="adminSignupEmail" required>
+        <label for="adminSignupPassword">Password:</label>
+        <input type="password" id="adminSignupPassword" name="adminSignupPassword" required>
+        <button type="submit">Sign Up</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
